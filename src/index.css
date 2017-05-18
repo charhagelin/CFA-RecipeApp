@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding-top: 50px;
+  font-family: sans-serif;
+  text-align: center;
+
+}
+
+.flexcontainer {
+	color: #fff;
+	height: 210px;
+	margin: 10px 0;
+	padding: 0;
+	width: 225px;
+	position: relative;
+}
+
+
+/*-------- cards --------*/
+.flex-item-front,
+.flex-item-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 170px;
+	padding: 20px;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.9s;
+	transition: transform 0.9s;
+	justify-content: flex-end;
+}
+
+.flex-item-front {
+	background-color: #702082;
+}
+
+.flex-item-back {
+	background-color: #1e1e1e;
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+/*-------- cards / flip effect --------*/
+.flexcontainer:hover .flex-item-front {
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.flexcontainer:hover .flex-item-back {
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+}
